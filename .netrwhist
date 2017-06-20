@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/darrenwu/workspace/projects/dragonboard/workdir/unpack/gadget'
+let g:netrw_dirhist_2='/home/darrenwu/workspace/go_work/src/github.com/Lyoncore/ubuntu-recovery-rplib/dirs/configdir'
+let g:netrw_dirhist_3='/home/darrenwu/workspace/projects/caracalla/uc16/driver/BT_WIFI/1.0_RC1/RS9113.NB0.NL.GNU.LNX.1.0.RC1/rsi'
