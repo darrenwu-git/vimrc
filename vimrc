@@ -311,3 +311,10 @@ let g:tagbar_type_go = {
 \ }
 """"""""""""""""""" nerdtree """""""""""""""""""
 map <C-b> :NERDTreeToggle<CR>
+""""""""""""""""""" markdown """""""""""""""""""
+" https://github.com/JamshedVesuna/vim-markdown-preview "
+"1. $ pip install grip "
+"2. $ $ sudo apt-get install xdotool"
+Plugin 'JamshedVesuna/vim-markdown-preview'
+let vim_markdown_preview_github=1
+let vim_markdown_preview_toggle=3
