@@ -318,3 +318,27 @@ map <C-b> :NERDTreeToggle<CR>
 Plugin 'JamshedVesuna/vim-markdown-preview'
 let vim_markdown_preview_github=1
 let vim_markdown_preview_toggle=3
+
+
+""""""""""""""""""" python """""""""""""""""""
+Plugin 'tell-k/vim-autopep8'
+"F5 for executing python"
+map <F5> :Autopep8<CR> :w<CR> :call RunPython()<CR>
+function RunPython()
+  let mp = &makeprg
+  let ef = &errorformat
+  let exeFile = expand("%:t")
+  setlocal makeprg=python\ -u
+  set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+  silent make %
+  copen
+  let &makeprg = mp
+  let &errorformat = ef
+endfunction
+
+""""""""""""""" YouCompleteMe """""""""""""
+"""""http://www.jianshu.com/p/f0513d18742a
+Plugin 'Valloric/YouCompleteMe'
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
